@@ -15,7 +15,7 @@ If you are developing a production application, we recommend using TypeScript wi
 ```
 # only once
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash &&
-# beelow command not needed if "grep nvm ~/.bashrc" displays nvm details and "command -v nvm" displays nvm
+# beelow command not needed if "grep nvm ~/.bashrc" :displays nvm details and "command -v nvm" :displays nvm
 export NVM_DIR="$HOME/.nvm" [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" &&
 nvm install --lts
 # for every new environment
@@ -314,6 +314,13 @@ gh repo create LearningFrontEnd --public --source=. --remote=origin --confirm
 git push origin main
 ```
 
+## Additional useful commands: 
+```bash
+# Clean up reflog and garbage collect
+git reflog expire --expire=now --all
+git gc --prune=now --aggressive
+```
+
 # Install Github CLI Steps (ubuntu 22.04)
 ## Update system (optional but recommended)
 sudo apt update && sudo apt upgrade -y
@@ -321,7 +328,7 @@ sudo apt update && sudo apt upgrade -y
 ## Install GitHub CLI
 sudo apt install gh
 
-#### if this command fails
+#### if above command fails
         Add the GitHub CLI repository
         curl -fsSL https://cli.github.com/packages/githubcli.repo | sudo tee /etc/apt/sources.list.d/github-cli.list
 
